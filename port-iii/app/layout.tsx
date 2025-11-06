@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import ResponsiveNav from "@/components/Home/NavBar/ResponsiveNav";
 import "./globals.css";
+import ScrollToTop from "@/components/Helper/ScrollToTop";
 
 const font = Inter({
   variable: '--font-Poppins',
@@ -23,8 +24,9 @@ export default function RootLayout({
     <html lang="pt-br">
       <body
         className={`${font.className} antialiased bg-[#0d0d1f]`}>
-          <ResponsiveNav/>
+        <ResponsiveNav/>
         {children}
+        <ScrollToTop/>
       </body>
     </html>
   );
